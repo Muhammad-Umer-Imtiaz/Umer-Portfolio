@@ -33,7 +33,7 @@ const Hero = () => {
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="animate-fade-in">
-          <div className="mb-8 sm:pt-8 pt-20">
+          <div className="mb-8 sm:pt-20 pt-20">
             <Avatar className="w-32 h-32 mx-auto mb-6 ring-4 ring-primary/20">
               <AvatarImage 
                 src="umerPicture.jpg" 

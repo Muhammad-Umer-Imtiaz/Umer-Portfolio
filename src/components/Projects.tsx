@@ -6,34 +6,34 @@ import { Badge } from "@/components/ui/badge";
 const Projects = () => {
   const projects = [
     {
-  title: "BlogBreeze - AI-Powered Blogging Platform",
-  description:
-    "A modern blog website powered by the MERN stack and integrated with Google's Gemini API for AI-generated blog content. Admins can create, manage, and delete blog posts, with secure authentication and media storage via ImageKit.io. Users can interact by commenting on blogs in real time.",
-  technologies: [
-    "React",
-    "Node.js",
-    "MongoDB",
-    "Express",
-    "JWT",
-    "Tailwind CSS",
-    "Axios",
-    "Gemini API",
-    "ImageKit.io",
-    "useContext"
-  ],
-  status: "Completed",
-  features: [
-    "Generate blog posts using Gemini AI API",
-    "Admin panel to create and delete blogs",
-    "JWT-based user authentication",
-    "Image uploads via ImageKit.io",
-    "Commenting system on blog posts",
-    "Fully responsive UI using Tailwind CSS"
-  ],
-  demoLink: "https://blogbreeze-ecru.vercel.app/",
-  githubLink: "https://github.com/Muhammad-Umer-Imtiaz/Blog_Website",
-  image: "blogbreeze.png",
-},
+      title: "BlogBreeze - AI-Powered Blogging Platform",
+      description:
+        "A modern blog website powered by the MERN stack and integrated with Google's Gemini API for AI-generated blog content. Admins can create, manage, and delete blog posts, with secure authentication and media storage via ImageKit.io. Users can interact by commenting on blogs in real time.",
+      technologies: [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Express",
+        "JWT",
+        "Tailwind CSS",
+        "Axios",
+        "Gemini API",
+        "ImageKit.io",
+        "useContext",
+      ],
+      status: "Completed",
+      features: [
+        "Generate blog posts using Gemini AI API",
+        "Admin panel to create and delete blogs",
+        "JWT-based user authentication",
+        "Image uploads via ImageKit.io",
+        "Commenting system on blog posts",
+        "Fully responsive UI using Tailwind CSS",
+      ],
+      demoLink: "https://blogbreeze-ecru.vercel.app/",
+      githubLink: "https://github.com/Muhammad-Umer-Imtiaz/Blog_Website",
+      image: "", // not used anymore
+    },
     {
       title: "Chatty - Real-time Chat Application",
       description:
@@ -64,7 +64,16 @@ const Projects = () => {
       title: "Ez Auctions - Online Auction System",
       description:
         "An advanced auction platform built with the MERN stack, designed to support dynamic bidding with robust admin control. The backend includes secure user authentication, bid management, and role-based access, with responsive UI and admin dashboards.",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "JWT", "Tailwind CSS", "Axios","chart.js"],
+      technologies: [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Express",
+        "JWT",
+        "Tailwind CSS",
+        "Axios",
+        "chart.js",
+      ],
       status: "Completed",
       features: [
         "Auction creation, editing, and deletion",
@@ -99,13 +108,27 @@ const Projects = () => {
               className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
             >
               <div className="grid md:grid-cols-2 gap-0">
-                {/* IMAGE */}
+                {/* IMAGE OR VIDEO */}
                 <div className="bg-muted/50 flex items-center justify-center p-4">
-                  <img
-                    src={`/${project.image}`}
-                    alt={project.title}
-                    className="rounded-lg object-cover w-full max-h-72"
-                  />
+                  {project.title === "BlogBreeze - AI-Powered Blogging Platform" ? (
+                    <iframe
+                      width="100%"
+                      height="315"
+                      src="https://www.youtube.com/embed/Pjm4K6XlyfE?si=ihQfu7rEMxjjiRYC"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                      className="rounded-lg"
+                    ></iframe>
+                  ) : (
+                    <img
+                      src={`/${project.image}`}
+                      alt={project.title}
+                      className="rounded-lg object-cover w-full max-h-72"
+                    />
+                  )}
                 </div>
 
                 <div>
